@@ -44,6 +44,20 @@ public class HomeController {
         model.addAttribute("insertRecord", new Record());
         return "home";
     }
+    
+    //---------------------Retrieve List of Adoptions---------------------------------------------------
+    @RequestMapping(value = "/records/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Record>> getAllRecords()
+    {
+        List<Record> record = repository.findAll();
+        if(record.isEmpty())
+        {
+            return new ResponseEntity<List<Record>>(HttpStatus.NO_CONTENT);//OR HttpStatus.Not_Found
+        }
+
+        return new ResponseEntity<List<Record>>(record,HttpStatus.OK);
+    }
+
 
     @RequestMapping(method = RequestMethod.POST)
     public String insertData(ModelMap model, 
