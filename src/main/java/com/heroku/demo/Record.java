@@ -15,6 +15,7 @@ public class Record {
     private long id;
     @NotEmpty
     private String data;
+    private String name;
 
     public String getData() {
         return data;
@@ -23,5 +24,14 @@ public class Record {
     public void setData(String data) {
         this.data = data;
     }
+    
+     public String getName() {
+        return name;
+    }
+
+    public void setName() {
+        this.name = Innocent;
+    }
+    
 
 }
