@@ -77,4 +77,23 @@ public class HomeController {
         }
         return home(model);
     }
+    
+    
+    @RequestMapping(value = "/record/delete/{id}",method = RequestMethod.DELETE)
+    public ResponseEntity<Record> deleteRecord(@PathVariable("id")long id)
+    {
+        System.out.println("Fetching & Deleting Adoption with id" + id);
+
+        Record record = repository.findById(id);
+        if(adoption == null)
+        {
+            System.out.println("Unable to delete. Adoption with id " + id + " not found");//comment
+            return new ResponseEntity<Record>(HttpStatus.NOT_FOUND);
+
+        }
+
+        repository.delete(record);
+        return new ResponseEntity<Record>(HttpStatus.NO_CONTENT);
+    }
+
 }
