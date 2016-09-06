@@ -87,7 +87,6 @@ public class HomeController {
     public ResponseEntity<Record> deleteRecord(@PathVariable("id")long id)
     {
         System.out.println("Fetching & Deleting Adoption with id" + id);
-
         Record record = repository.findOne(id);
         if(record  == null)
         {
@@ -96,8 +95,7 @@ public class HomeController {
 
         }
 
-        repository.delete(record);
-        return new ResponseEntity<Record>(HttpStatus.NO_CONTENT);
+            repository.delete(record);
+            return new ResponseEntity<Record>(HttpStatus.NO_CONTENT);
+        }
     }
-
-}
