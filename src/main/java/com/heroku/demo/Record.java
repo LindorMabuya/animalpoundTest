@@ -30,7 +30,7 @@ public class Record {
     }
 
     public void setName() {
-        this.name = Innocent;
+        this.name = "Innocent";
     }
     
 
