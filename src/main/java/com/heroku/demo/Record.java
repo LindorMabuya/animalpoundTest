@@ -42,11 +42,6 @@ public class Record {
     public void setPersonSurname(String personsurname) {
         this.personsurname = personsurname;
     }
-    
-    public void setPersonName(String personname) {
-        this.personname = personname;
-    }
-    
     public String getPhonenumber() {
         return phonenumber;
     }
