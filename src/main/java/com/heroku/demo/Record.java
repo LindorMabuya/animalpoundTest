@@ -16,6 +16,8 @@ public class Record {
     @NotEmpty
     private String animalname;
     private String personname;
+    private String personsurname;
+    private String phonenumber;
    
     public String getAnimalname() {
         return animalname;
@@ -24,6 +26,13 @@ public class Record {
     public void setAnimalname(String animalname) {
         this.animalname = animalname;
     }
+     public String getPhoneNumber() {
+        return phonenumber;
+    }
+
+    public void setPhoneNumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
     
      public String getPersonname() {
         return personname;
@@ -31,6 +40,14 @@ public class Record {
 
     public void setPersonName(String personname) {
         this.personname = personname;
+    }
+    
+     public String getPersonSurname() {
+        return personsurname;
+    }
+
+    public void setPersonSurname(String personsurname) {
+        this.personsurname = personsurname;
     }
     
 }
