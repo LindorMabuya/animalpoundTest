@@ -14,15 +14,17 @@ public class Record {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NotEmpty
-    private String data;
-    private String name;
+    private String animalname;
+    private String personname;
+    private String personsurname;
+    private String date;
 
-    public String getData() {
-        return data;
+    public String animalname() {
+        return animalname;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setAnimalname(String animalname) {
+        this.animalname = animalname;
     }
     
      public String getName() {
