@@ -72,7 +72,7 @@ public class HomeController {
         return home(model);
     }
     
- @RequestMapping(value = "/record/create", method = RequestMethod.POST)
+ @RequestMapping(value = "/record/create", method = RequestMethod.PUT)
     public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
     {
         repository.saveAndFlush(record);
