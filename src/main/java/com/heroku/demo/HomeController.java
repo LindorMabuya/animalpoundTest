@@ -84,7 +84,7 @@ public class HomeController {
     {
         System.out.println("Fetching & Deleting Adoption with id" + id);
 
-        Record record = repository.findById(id);
+        Record record = repository.findByOne(id);
         if(record  == null)
         {
             System.out.println("Unable to delete. Adoption with id " + id + " not found");//comment
