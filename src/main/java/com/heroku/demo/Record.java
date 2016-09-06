@@ -59,7 +59,7 @@ public class Record {
         return phonenumber;
     }
    
-   public void setPersonName(String phonenumber) {
+   public void setPhonenumber(){
         this.phonenumber = phonenumber;
     }
     
