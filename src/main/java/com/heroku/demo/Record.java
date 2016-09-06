@@ -35,11 +35,11 @@ public class Record {
         this.personname = personname;
     }
     
-      public String getSurname() {
+      public String getPersonSurname() {
         return personname;
     }
 
-    public void setPersonName(String personsurname) {
+    public void setPersonSurname(String personsurname) {
         this.personsurname = personsurname;
     }
     
