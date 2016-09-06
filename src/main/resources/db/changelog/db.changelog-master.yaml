@@ -27,7 +27,7 @@ databaseChangeLog:
                   name: personsurname
                   type: varchar(255)
                   constraints:
-                    nullable: false
+                    nullable: true
               - column:
                   name: phonenumber
                   type: varchar(255)
