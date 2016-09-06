@@ -39,7 +39,7 @@ public class Record {
         return personname;
     }
 
-    public void setPersonName(String personname) {
+    public void setPersonname(String personname) {
         this.personname = personname;
     }
     
