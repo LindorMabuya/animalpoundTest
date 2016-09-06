@@ -38,15 +38,7 @@ public class HomeController {
         model.addAttribute("insertRecord", new Record());
         return "home";
     }
-    @RequestMapping(value = "/record/create", method = RequestMethod.PUT)
-    public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
-    {
-        repository.saveAndFlush(record);
-        HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/record/{id}").buildAndExpand(record.getId()).toUri());
-        return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
-    }
-    
+
     @RequestMapping(value = "/record/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Record> getRecord(@PathVariable("id") long id) {
         Record record = repository.getOne(id);
@@ -72,6 +64,16 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String insertData(ModelMap model, 
+                             @ModelAttribute("insertRecord") @Valid Record record,
+                             BindingResult result) {
+        if (!result.hasErrors()) {
+            repository.save(record);
+        }
+        return home(model);
+    }
+    
+ @RequestMapping(value = "/record/create",method = RequestMethod.POST)
+    public String insertData2(ModelMap model, 
                              @ModelAttribute("insertRecord") @Valid Record record,
                              BindingResult result) {
         if (!result.hasErrors()) {
