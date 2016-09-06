@@ -35,20 +35,4 @@ public class Record {
         this.personname = personname;
     }
     
-      public String getPersonSurname() {
-        return personname;
-    }
-
-    public void setPersonSurname(String personsurname) {
-        this.personsurname = personsurname;
-    }
-    public String getPhonenumber() {
-        return phonenumber;
-    }
-   
-   public void setPhonenumber(){
-        this.phonenumber = phonenumber;
-    }
     
-
-}
