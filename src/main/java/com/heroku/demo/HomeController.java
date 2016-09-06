@@ -41,7 +41,7 @@ public class HomeController {
 
     @RequestMapping(value = "/record/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Record> getRecord(@PathVariable("id") long id) {
-        Record record = repository.getOne(id);
+        Record record = repository.findOne(id);
         if (record == null) {
             return new ResponseEntity<Record>(HttpStatus.NOT_FOUND);
         }
