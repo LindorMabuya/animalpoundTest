@@ -15,6 +15,7 @@ public class Record {
     private long id;
     @NotEmpty
     private String animalname;
+    
     private String personname;
     private String personsurname;
     private String phonenumber;
@@ -42,11 +43,11 @@ public class Record {
         this.personname = personname;
     }
     
-     public String getPersonSurname() {
+     public String getPersonsurname() {
         return personsurname;
     }
 
-    public void setPersonSurname(String personsurname) {
+    public void setPersonsurname(String personsurname) {
         this.personsurname = personsurname;
     }
     
