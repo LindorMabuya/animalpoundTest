@@ -58,6 +58,17 @@ public class Record {
         this.personsurname = personsurname;
     }
     
+    public Record copy(Record record){
+            this.id = record.getId();
+            this.animalname = record.getAnimalname();
+            this.personname = record.getPersonname(); 
+            this.personsurname = record.getPersonsurname();
+            this.phonenumber = record.getPhoneNumber;
+
+            return this;
+        }
+
+    
 }
     
     
