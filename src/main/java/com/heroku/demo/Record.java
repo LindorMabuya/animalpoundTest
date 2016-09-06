@@ -17,8 +17,8 @@ public class Record {
     private String animalname;
     private String personname;
     private String personsurname;
-    private String date;
-
+    private String phonenumber;
+  
     public String animalname() {
         return animalname;
     }
@@ -27,12 +27,40 @@ public class Record {
         this.animalname = animalname;
     }
     
-     public String getName() {
-        return name;
+     public String getPersonname() {
+        return personname;
     }
 
-    public void setName() {
-        this.name = "Innocent";
+    public void setPersonName(String personname) {
+        this.personname = personname;
+    }
+    
+      public String getSurname() {
+        return personname;
+    }
+
+    public void setPersonName(String personsurname) {
+        this.personsurname = personsurname;
+    }
+    
+    public void setPersonName(String personname) {
+        this.personname = personname;
+    }
+    
+    public String getSurname() {
+        return personname;
+    }
+   
+   public void setPersonName(String personsurname) {
+        this.personsurname = personsurname;
+    }
+    
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+   
+   public void setPersonName(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
     
 
