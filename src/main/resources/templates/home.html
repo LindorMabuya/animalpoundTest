@@ -20,8 +20,14 @@
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
-                    <label for="data">Record to insert</label>
+                   <label for="data">Record to insert</label>
                     <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{animalname}" />
+                    <label for="data">Record to insert</label>
+                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{personname}" />
+                    <label for="data">Record to insert</label>
+                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{personSurname}" />
+                    <label for="data">Record to insert</label>
+                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{phoneNumber}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -40,6 +46,9 @@
                 <tbody>
                     <tr th:each="record : ${records}">
                         <td th:text="${record.animalname}">Some text</td>
+                        <td th:text="${record.personname}">Some text</td>
+                        <td th:text="${record.personsurname}">Some text</td>
+                        <td th:text="${record.phonenumber}">Some text</td>
                     </tr>
                 </tbody>
             </table>
