@@ -72,6 +72,10 @@ public class HomeController {
         return home(model);
     }
     
+    @RequestMapping(value = "/record/create1", method = RequestMethod.POST)
+    public void insertData2(Record record) {
+        repository.save(record);
+    }
  @RequestMapping(value = "/record/create", method = RequestMethod.PUT)
     public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
     {
