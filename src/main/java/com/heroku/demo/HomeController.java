@@ -46,6 +46,16 @@ public class HomeController {
         headers.setLocation(ucBuilder.path("/record/{id}").buildAndExpand(record.getId()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
+    
+    @RequestMapping(value = "/record/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Record> getRecord(@PathVariable("id") long id) {
+        Record record = repository.getOne(id);
+        if (record == null) {
+            return new ResponseEntity<Record>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<Record>(record, HttpStatus.OK);
+    }
+
 
     //---------------------Retrieve List of Adoptions---------------------------------------------------
     @RequestMapping(value = "/records/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
