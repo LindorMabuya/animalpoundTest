@@ -51,7 +51,7 @@ public class Record {
         return personname;
     }
    
-   public void setPersonName(String personsurname) {
+   public void setPersonSurname(String personsurname) {
         this.personsurname = personsurname;
     }
     
