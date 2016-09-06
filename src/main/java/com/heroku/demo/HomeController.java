@@ -41,7 +41,7 @@ public class HomeController {
     
     //---------------------Retrieve List of Adoptions---------------------------------------------------
     @RequestMapping(value = "/records/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Record>> getAllRecords()
+    public ResponseEntity<List<Record>> getOneRecord()
     {
         List<Record> record = repository.findAll();
         if(record.isEmpty())
