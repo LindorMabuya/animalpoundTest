@@ -38,7 +38,15 @@ public class HomeController {
         model.addAttribute("insertRecord", new Record());
         return "home";
     }
-    
+    @RequestMapping(value = "/record/create", method = RequestMethod.PUT)
+    public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
+    {
+        myService.create(record);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setLocation(ucBuilder.path("/record/{id}").buildAndExpand(record.getId()).toUri());
+        return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+    }
+
     //---------------------Retrieve List of Adoptions---------------------------------------------------
     @RequestMapping(value = "/records/",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Record>> getOneRecord()
