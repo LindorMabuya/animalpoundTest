@@ -16,10 +16,8 @@ public class Record {
     @NotEmpty
     private String animalname;
     private String personname;
-    private String personsurname;
-    private String phonenumber;
-  
-    public String animalname() {
+   
+    public String getAnimalname() {
         return animalname;
     }
 
