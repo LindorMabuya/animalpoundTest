@@ -23,3 +23,13 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: true
+              - column:
+                  name: personsurname
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phonenumber
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
