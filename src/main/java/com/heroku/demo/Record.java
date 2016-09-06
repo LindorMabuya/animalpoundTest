@@ -19,6 +19,13 @@ public class Record {
     private String personname;
     private String personsurname;
     private String phonenumber;
+    
+    public long getId(){
+        return id;
+    }
+    public long setId(long id){
+        this.id = id;
+    }
    
     public String getAnimalname() {
         return animalname;
