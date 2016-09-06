@@ -63,7 +63,7 @@ public class Record {
             this.animalname = record.getAnimalname();
             this.personname = record.getPersonname(); 
             this.personsurname = record.getPersonsurname();
-            this.phonenumber = record.getPhonenumber;
+            this.phonenumber = record.getPhoneNumber();
 
             return this;
         }
