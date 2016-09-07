@@ -13,7 +13,7 @@ public class Record {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotEmpty
+
     private String animalname;
     
     private String personname;
