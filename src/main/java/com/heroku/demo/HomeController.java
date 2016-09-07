@@ -76,7 +76,7 @@ public class HomeController {
     public void insertData2(Record record) {
         repository.save(record);
     }
- @RequestMapping(value = "/record/create", method = RequestMethod.PUT)
+ @RequestMapping(value = "/record/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
     {
         repository.saveAndFlush(record);
