@@ -79,7 +79,7 @@ public class HomeController {
  @RequestMapping(value = "/record/create", method = RequestMethod.POST)
     public ResponseEntity<Void> createRecord(@RequestBody Record record, UriComponentsBuilder ucBuilder)
     {
-        repository.saveAndFlush(record);
+        repository.save(record);
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/record/{id}").buildAndExpand(record.getId()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
