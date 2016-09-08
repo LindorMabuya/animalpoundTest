@@ -34,11 +34,11 @@ public class Record {
     public void setAnimalname(String animalname) {
         this.animalname = animalname;
     }
-     public String getPhoneNumber() {
+     public String getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhoneNumber(String phonenumber) {
+    public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
     
@@ -63,7 +63,7 @@ public class Record {
             this.animalname = record.getAnimalname();
             this.personname = record.getPersonname(); 
             this.personsurname = record.getPersonsurname();
-            this.phonenumber = record.getPhoneNumber();
+            this.phonenumber = record.getPhonenumber();
 
             return this;
         }
