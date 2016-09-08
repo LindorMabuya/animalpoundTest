@@ -105,7 +105,7 @@ public class HomeController {
        @RequestMapping(value = "/record/delete/{id}",method = RequestMethod.DELETE)
       public String deletedata(ModelMap model, 
                              @ModelAttribute("deletedrec") @Valid Record record,
-                             BindingResult result) {
+                             BindingResult result, @PathVariable("id")long id) {
         if (!result.hasErrors()) {
            record =  repository.findOne(id);
             repository.save(record);
