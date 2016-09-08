@@ -87,7 +87,7 @@ public class HomeController {
 
     
     
-    /*@RequestMapping(value = "/record/delete/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/record/delete/{id}",method = RequestMethod.DELETE)
     public ResponseEntity<Record> deleteRecord(@PathVariable("id")long id)
     {
         System.out.println("Fetching & Deleting Adoption with id" + id);
@@ -101,16 +101,7 @@ public class HomeController {
 
             repository.delete(record);
             return new ResponseEntity<Record>(HttpStatus.NO_CONTENT);
-        }*/
-       @RequestMapping(value = "/record/delete/{id}",method = RequestMethod.DELETE)
-      public String deletedata(ModelMap model, 
-                             @ModelAttribute("deletedrec") @Valid Record record,
-                             BindingResult result, @PathVariable("id")long id) {
-        if (!result.hasErrors()) {
-           record =  repository.findOne(id);
-            repository.save(record);
         }
-        return home(model);
-    }
+      
 }
        
