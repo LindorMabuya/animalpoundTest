@@ -16,7 +16,7 @@ public class Record {
 
     private String animalname;
     
-    private String adopterName;
+    private String adoptername;
     private String personsurname;
     private String phonenumber;
     
@@ -43,11 +43,11 @@ public class Record {
     }
     
      public String getPersonname() {
-        return personsurname;
+        return adoptername;
     }
 
-    public void setPersonname(String adopterName) {
-        this.adopterName = adopterName;
+    public void setAdoptername(String adoptername) {
+        this.adoptername = adoptername;
     }
     
      public String getPersonsurname() {
