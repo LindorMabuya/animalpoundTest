@@ -17,7 +17,7 @@ public class Record {
     private String animalName;
     
     private String adopterName;
-    private String adopterSurname
+    private String adopterSurname;
     private String phonenumber;
     
     public long getId(){
