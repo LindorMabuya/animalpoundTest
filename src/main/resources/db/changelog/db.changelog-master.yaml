@@ -14,17 +14,17 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: animalname
+                  name: animalName
                   type: varchar(255)
                   constraints:
                     nullable: true
               - column:
-                  name: personname
+                  name: adopterName
                   type: varchar(255)
                   constraints:
                     nullable: true
               - column:
-                  name: personsurname
+                  name: adopterSurname
                   type: varchar(255)
                   constraints:
                     nullable: true
