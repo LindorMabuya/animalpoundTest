@@ -51,7 +51,7 @@ public class Record {
     }
     
      public String getPersonsurname() {
-        return adopterName;
+        return adoptername;
     }
 
     public void setPersonsurname(String personsurname) {
@@ -61,7 +61,7 @@ public class Record {
     public Record copy(Record record){
             this.id = record.getId();
             this.animalname = record.getAnimalname();
-            this.adopterName = record.getPersonname(); 
+            this.adoptername = record.getPersonname(); 
             this.personsurname = record.getPersonsurname();
             this.phonenumber = record.getPhonenumber();
 
