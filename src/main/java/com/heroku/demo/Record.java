@@ -28,7 +28,7 @@ public class Record {
     }
    
     public String getAnimalName() {
-        return animalname;
+        return animalName;
     }
 
     public void setAnimalName(String animalName) {
@@ -50,12 +50,12 @@ public class Record {
         this.adopterName = adopterName;
     }
     
-     public String getAdopterName() {
-        return adopterName;
+     public String getAdopterSurname() {
+        return adopterSurname;
     }
 
-    public void setAdopterName(String adopterName) {
-        this.adopterName = adopterName;
+    public void setAdopterSurname(String adopterSurname) {
+        this.adopterSurname = adopterSurname;
     }
     
  }
