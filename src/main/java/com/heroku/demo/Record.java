@@ -28,7 +28,7 @@ public class Record {
     }
    
     public String getAnimalname() {
-        return animalName;
+        return animalname;
     }
 
     public void setAnimalname(String animalname) {
