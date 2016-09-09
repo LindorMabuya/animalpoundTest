@@ -16,7 +16,7 @@ public class Record {
 
     private String animalname;
     
-    private String personname;
+    private String adopterName;
     private String personsurname;
     private String phonenumber;
     
@@ -43,15 +43,15 @@ public class Record {
     }
     
      public String getPersonname() {
-        return personname;
+        return personsurname;
     }
 
-    public void setPersonname(String personname) {
-        this.personname = personname;
+    public void setPersonname(String adopterName) {
+        this.adopterName = adopterName;
     }
     
      public String getPersonsurname() {
-        return personsurname;
+        return adopterName;
     }
 
     public void setPersonsurname(String personsurname) {
@@ -61,7 +61,7 @@ public class Record {
     public Record copy(Record record){
             this.id = record.getId();
             this.animalname = record.getAnimalname();
-            this.personname = record.getPersonname(); 
+            this.adopterName = record.getPersonname(); 
             this.personsurname = record.getPersonsurname();
             this.phonenumber = record.getPhonenumber();
 
